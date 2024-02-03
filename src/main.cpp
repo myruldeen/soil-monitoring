@@ -142,7 +142,8 @@ void loop() {
 
   now = millis();
   if (now - lastMeasure>=10000) {
-  
+    lastMeasure = now;
+
     // NPK Process
     readRS485();
     readAHT_LightSensor();
